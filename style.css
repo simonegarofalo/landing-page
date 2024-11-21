@@ -9,37 +9,25 @@ ul {
   list-style: none;
 }
 
-span {
-  align-content: center;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-.container-2 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
 .navbar {
-  background-color: gray;
-
+  background-color: rgb(230, 230, 230);
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-
   position: sticky;
   top: 0;
-  overflow: hidden;
 }
 
 .navbar-content {
   grid-column: 2/12;
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -50,7 +38,7 @@ nav ul {
 }
 
 .hero {
-  margin: 20px;
+  margin: 50px 20px;
 
   height: 500px;
 
@@ -80,76 +68,12 @@ button {
   gap: 2% 1%;
 }
 
-.card-1 {
+.card {
+  display: flex;
+  grid-column: span 2;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 1/3;
-}
-
-.card-2 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 3/5;
-}
-
-.card-3 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 5/7;
-}
-
-.card-4 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 7/9;
-}
-
-.card-5 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 9/11;
-}
-
-.card-6 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 1/2;
-  grid-column: 11/13;
-}
-
-.card-7 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 1/3;
-}
-
-.card-8 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 3/5;
-}
-
-.card-9 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 5/7;
-}
-
-.card-10 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 7/9;
-}
-
-.card-11 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 9/11;
-}
-
-.card-12 {
-  background-color: rgb(198, 198, 198);
-  grid-row: 2/3;
-  grid-column: 11/13;
 }
 
 .special-title {
@@ -157,41 +81,26 @@ button {
   background-color: rgb(198, 198, 198);
   width: 100%;
   position: sticky;
-  top: 0;
-  overflow: hidden;
+  top: 59px;
 }
 
 .special-title h2 {
   margin-left: 20px;
 }
 
-.product {
-  margin: 20px;
-  height: 1000px;
+.products {
+  margin: 0px 20px 100px 20px;
+  height: 100vh;
   gap: 2% 1%;
 }
 
-.product-1 {
-  grid-row: 1/2;
-  grid-column: 1/7;
+.single-product {
+  grid-column: span 6;
   background-color: rgb(198, 198, 198);
 }
 
-.product-2 {
-  grid-row: 2/3;
-  grid-column: 7/13;
-  background-color: rgb(198, 198, 198);
-}
-
-.product-content-1 {
-  grid-column: 7/12;
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-}
-
-.product-content-2 {
-  grid-column: 1/6;
+.product-text {
+  grid-column: span 6;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
@@ -202,21 +111,18 @@ button {
   background-color: rgb(198, 198, 198);
 }
 
-.footer-container {
+.footer h2 {
+  grid-column: span 6;
+  align-items: start;
   margin-left: 20px;
-  padding-top: 50px;
 }
 
-.list-1 {
-  grid-column: 7/8;
-}
-
-.list-2 {
-  grid-column: 9/10;
-}
-
-.list-3 {
-  grid-column: 11/12;
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
 }
 
 .container li {
