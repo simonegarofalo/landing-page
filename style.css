@@ -29,6 +29,8 @@ body {
 
   background-color: var(--background-color-light);
   color: var(--text-color-dark);
+
+  font-family: "Montserrat";
 }
 
 ul {
@@ -95,6 +97,7 @@ nav {
 
   background-color: var(--background-color-light);
   color: var(--text-color-dark);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   padding: 10px 0;
 
@@ -174,6 +177,7 @@ li:hover {
 
 .img-placeholder:hover {
   background-color: var(--background-color-placeholder-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s;
 }
 
@@ -225,6 +229,7 @@ li:hover {
 
 .img-service:hover {
   background-color: var(--background-color-placeholder-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s;
 }
 
@@ -290,6 +295,7 @@ li:hover {
 
 .card:hover {
   background-color: var(--background-color-placeholder-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s;
 }
 
@@ -307,6 +313,7 @@ li:hover {
 
 .card-span-2:hover {
   background-color: var(--background-color-placeholder-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s;
 }
 .card-span-3 {
@@ -323,6 +330,7 @@ li:hover {
 
 .card-span-3:hover {
   background-color: var(--background-color-placeholder-hover);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.3s;
 }
 
@@ -484,6 +492,7 @@ form {
   padding: 10px;
 }
 
+/* Thanks page*/
 .thanks {
   height: 100svh;
 
@@ -514,6 +523,36 @@ form {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+/* Cookie banner*/
+.cookie-banner {
+  height: 250px;
+  width: 500px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 20px;
+  margin: 20px;
+
+  background-color: var(--background-color-white);
+  color: var(--text-color-dark);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  text-align: justify;
+}
+
+.cookie-banner button {
+  width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -641,7 +680,16 @@ form {
     flex-direction: column;
   }
 
+  /* Thanks page*/
   .thanks-content h1 {
-    font-size: var(--xxl-font-size);
+    font-size: var(--xl-font-size);
+  }
+
+  /* Cookie section*/
+  .cookie-banner {
+    height: 50% !important;
+    width: 100% !important;
+
+    margin: 0 !important;
   }
 }

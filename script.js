@@ -1,3 +1,15 @@
+const banner = document.getElementById("cookie-policy");
+const acceptButton = document.getElementById("accept-cookies");
+
+setTimeout(function () {
+    banner.style.display = "flex";
+  }, 3000);
+  
+  acceptButton.addEventListener("click", function () {
+    banner.style.display = "none";
+  });
+
+
 let hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
   document.body.classList.toggle("open");
