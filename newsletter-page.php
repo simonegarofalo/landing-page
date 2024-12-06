@@ -31,7 +31,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     <div class="thanks container">
       <div class="img-placeholder-background">
         <div class="thanks-content">
-          <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
+          <h1>Welcome, <?php echo htmlspecialchars($username); ?>! 👋🏼</h1>
           <h3>Thank you for subscribing.</h3>
           <p>
           We're excited to have you on board. You will now receive the latest updates, news, and exclusive offers directly in your inbox.          </p>
