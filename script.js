@@ -9,6 +9,27 @@ setTimeout(function () {
     banner.style.display = "none";
   });
 
+let lastScrollPosition = 0;
+let scrollThreshold = 50;
+let accumulatedScroll = 0;
+const navbar = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScrollPosition = window.scrollY;
+
+  accumulatedScroll += currentScrollPosition - lastScrollPosition;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    navbar.classList.add("hidden");
+    accumulatedScroll = 0;
+  } else if (accumulatedScroll < -scrollThreshold){
+    navbar.classList.remove("hidden");
+    accumulatedScroll = 0;
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
+
 
 let hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
