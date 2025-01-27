@@ -198,7 +198,7 @@ li:hover {
 
 /* Services section */
 .services {
-  gap: 5%;
+  display: flex;
 }
 
 .img-service-1 {
@@ -262,6 +262,10 @@ li:hover {
   margin: 20px;
 
   text-align: justify;
+}
+
+#servizi {
+  margin-bottom: 10%;
 }
 
 .description-button-container {
@@ -456,7 +460,7 @@ li:hover {
   align-items: center;
   justify-content: center;
 
-  margin: 20px;
+  margin: 40px;
 
   text-align: center;
 }
@@ -472,7 +476,7 @@ form {
 
 .input-field {
   height: 50px;
-  width: 300px;
+  width: 250px;
 
   margin: 10px;
   padding: 10px;
@@ -500,7 +504,7 @@ form {
 
 .submit {
   height: 50px;
-  width: 300px;
+  width: 250px;
 
   font-size: var(--s-font-size);
   color: var(--text-color-white);
@@ -676,9 +680,13 @@ form {
   /* Hero section*/
   .hero-content {
     grid-column: span 12;
+
+    margin-top: 50px;
   }
-  .img-placeholder {
-    display: none;
+
+  .img-hero {
+    grid-column: span 12;
+    max-width: 100%;
   }
 
   /* Brand description section */
@@ -687,25 +695,22 @@ form {
   }
 
   /* Services section */
-  .services {
-    height: 100%;
 
-    justify-content: center;
+  .img-service-1,
+  .img-service-2 {
+    grid-column: span 12;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Larghezza massima del contenitore */
+    height: auto; /* Impostato dinamicamente */
+    aspect-ratio: 16 / 9; /* Imposta un rapporto d'aspetto di default */
   }
 
-  .service-description {
-    grid-column: 2/12;
-
+  .service-description-1,
+  .service-description-2 {
+    grid-column: span 12;
     align-items: center;
-    gap: 20px;
-  }
-
-  .img-service {
-    width: 500px;
-  }
-
-  .img-service p {
-    display: none;
   }
 
   /* Cards section*/
@@ -714,12 +719,9 @@ form {
   }
 
   .card,
-  .card-span-2 {
-    grid-column: span 4;
-  }
-
+  .card-span-2,
   .card-span-3 {
-    grid-column: span 8;
+    grid-column: span 12;
   }
 
   .newsletter-description {
