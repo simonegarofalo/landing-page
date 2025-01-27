@@ -115,11 +115,8 @@ nav {
   justify-content: space-between;
 }
 
-.logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #2f2f2f;
+.nav-content span {
+  font-weight: bold;
 }
 
 nav ul {
@@ -143,7 +140,7 @@ li:hover {
 
 /* Hero section */
 .hero {
-  height: 100vh;
+  height: 100svh;
 }
 
 .hero-content {
@@ -153,7 +150,9 @@ li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2%;
+
+  text-align: center;
+  gap: 5%;
 }
 
 .hero-content h1 {
@@ -161,32 +160,20 @@ li:hover {
 }
 
 .hero-content p {
-  margin: 10px 20px;
+  font-size: var(--l-font-size);
 
   text-align: center;
 }
 
-.img-placeholder {
+.img-hero {
   grid-column: span 6;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--background-color-placeholder);
-
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-image: url(./assets/hero.jpg); /* URL dell'immagine */
+  background-size: cover; /* Adatta l'immagine in modalità cover */
   cursor: pointer;
-}
-
-.img-placeholder:hover {
-  background-color: var(--background-color-placeholder-hover);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: 0.3s;
-}
-
-.img-placeholder p {
-  color: var(--text-color-white);
-  font-size: var(--xl-font-size);
 }
 
 /* Brand description section */
@@ -211,21 +198,29 @@ li:hover {
 
 /* Services section */
 .services {
-  height: 100%;
-
-  gap: 50px;
+  gap: 5%;
 }
 
-.img-service {
-  height: 500px;
-
+.img-service-1 {
   grid-column: span 7;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 500px;
 
-  background-color: var(--background-color-placeholder);
+  background-image: url(./assets/service-1.jpg); /* URL dell'immagine */
+  background-position: center;
+  background-size: cover; /* Adatta l'immagine in modalità cover */
+  cursor: pointer;
+}
+
+.img-service-2 {
+  grid-column: span 7;
+
+  height: 500px;
+
+  background-image: url(./assets/service-2.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
 
   cursor: pointer;
 }
@@ -241,20 +236,40 @@ li:hover {
   font-size: var(--xl-font-size);
 }
 
-.service-description {
-  grid-column: span 5;
+.service-description-1 {
+  grid-column: 8/12;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: start;
+  gap: 5%;
 
-  margin: 50px 20px 0 20px;
+  margin: 20px;
 
   text-align: justify;
 }
 
-.service-description button {
-  width: 200px;
+.service-description-2 {
+  grid-column: 2/6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 5%;
+
+  margin: 20px;
+
+  text-align: justify;
+}
+
+.description-button-container {
+  align-items: end;
+}
+
+.services button {
+  width: 130px;
 }
 
 /* Product cards section */
@@ -277,7 +292,6 @@ li:hover {
 .cards {
   height: 700px;
 
-  background-color: var(--background-color-light);
   color: var(--background-color-white);
   font-size: var(--xl-font-size);
 
@@ -288,12 +302,16 @@ li:hover {
   grid-column: span 2;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 
-  background-color: var(--background-color-placeholder);
+  filter: brightness(70%);
 
   cursor: pointer;
+}
+
+.card:hover {
+  filter: brightness(100%);
 }
 
 .card:hover {
@@ -306,37 +324,71 @@ li:hover {
   grid-column: span 4;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 
-  background-color: var(--background-color-placeholder);
+  filter: brightness(70%);
 
   cursor: pointer;
 }
 
 .card-span-2:hover {
-  background-color: var(--background-color-placeholder-hover);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: 0.3s;
+  filter: brightness(100%);
 }
+
 .card-span-3 {
   grid-column: span 6;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 
-  background-color: var(--background-color-placeholder);
+  filter: brightness(70%);
 
   cursor: pointer;
 }
 
 .card-span-3:hover {
-  background-color: var(--background-color-placeholder-hover);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: 0.3s;
+  filter: brightness(100%);
 }
 
+#card-1 {
+  background-image: url(./assets/card-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#card-2 {
+  background-image: url(./assets/card-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#card-3 {
+  background-image: url(./assets/card-3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#card-4 {
+  background-image: url(./assets/card-4.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+#card-5 {
+  background-image: url(./assets/card-5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#card-6 {
+  background-image: url(./assets/card-6.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#card-7 {
+  background-image: url(./assets/card-7.jpg);
+  background-position: center;
+  background-size: cover;
+}
 /* Review section */
 .review-box {
   height: 100svh;
@@ -382,7 +434,6 @@ li:hover {
 
   background-color: var(--background-color-placeholder);
 
-  border: 1px solid #2f2f2f;
   border-radius: 50%;
 }
 
@@ -405,7 +456,7 @@ li:hover {
   align-items: center;
   justify-content: center;
 
-  margin: 0 20px;
+  margin: 20px;
 
   text-align: center;
 }
