@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --background-color-white: #ffffff;
   --background-color-light: #e8e4da;
@@ -22,13 +24,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100svh;
 
-  background-color: var(--background-color-light);
+  background-color: var(--background-color-white);
   color: var(--text-color-dark);
+
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: var(--xxxl-font-size);
+  line-height: 3rem;
+}
+
+h2 {
+  font-weight: lighter;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: var(--xxl-font-size);
+  line-height: 2.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+span {
+  font-size: var(--m-font-size);
+  line-height: 1.5rem;
 }
 
 ul {
@@ -38,6 +70,10 @@ ul {
 a {
   text-decoration: none;
   color: var(--text-color-dark);
+}
+
+.special-padding {
+  padding: 0px 10px !important ;
 }
 
 /* Set grid layout */
@@ -83,7 +119,7 @@ a {
   border: 1px solid #2f2f2f;
   cursor: pointer;
 
-  padding: 14px;
+  padding: 10px 30px;
 }
 
 /* Navbar menu */
@@ -93,18 +129,13 @@ a {
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  z-index: 1;
   width: 100%;
-
-  background-color: var(--background-color-light);
+  z-index: 20;
+  position: fixed;
+  background-color: var(--background-color-);
   color: var(--text-color-dark);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   padding: 10px 0;
-
-  border-bottom: 1px solid #bdb9ae;
 }
 
 .nav-content {
@@ -112,7 +143,9 @@ nav {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
+
+  width: 100%;
 }
 
 .nav-content span {
@@ -148,11 +181,13 @@ li:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: start;
 
-  text-align: center;
-  gap: 5%;
+  text-align: start;
+
+  margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .hero-content h1 {
@@ -162,7 +197,11 @@ li:hover {
 .hero-content p {
   font-size: var(--l-font-size);
 
-  text-align: center;
+  text-align: start;
+
+  font-weight: lighter;
+
+  margin-bottom: 0.5rem;
 }
 
 .img-hero {
@@ -170,8 +209,7 @@ li:hover {
 
   width: 100%;
   height: 100%;
-  max-height: 100%;
-  background-image: url(./assets/hero.jpg); /* URL dell'immagine */
+  background-image: url(./assets/img-hero.jpg); /* URL dell'immagine */
   background-size: cover; /* Adatta l'immagine in modalità cover */
   cursor: pointer;
 }
@@ -179,9 +217,9 @@ li:hover {
 /* Brand description section */
 
 .description-section {
-  height: 100vh;
-
   background-color: var(--background-color-white);
+
+  min-height: 500px;
 }
 
 .description-content {
@@ -191,11 +229,46 @@ li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 
   text-align: center;
 }
 
+.description-content h2 {
+  font-size: var(--xxl-font-size);
+  line-height: 3rem;
+}
+
+/* Stats section */
+.stats-section {
+  grid-column-start: 2;
+  grid-column-end: 12;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 200px;
+}
+
+.stats-card {
+  flex: 1 1 100%;
+
+  padding: 1rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 300px;
+  justify-self: end;
+}
+
+.stats-card span {
+  font-size: var(--xl-font-size);
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
 /* Services section */
 .services {
   display: flex;
@@ -206,7 +279,7 @@ li:hover {
 
   height: 500px;
 
-  background-image: url(./assets/service-1.jpg); /* URL dell'immagine */
+  background-image: url(./assets//yoga-one-to-one.jpg); /* URL dell'immagine */
   background-position: center;
   background-size: cover; /* Adatta l'immagine in modalità cover */
   cursor: pointer;
@@ -217,10 +290,9 @@ li:hover {
 
   height: 500px;
 
-  background-image: url(./assets/service-2.jpg);
+  background-image: url(./assets/yoga-outdoor.jpg);
   background-position: center;
   background-size: cover;
-  filter: grayscale(100%);
 
   cursor: pointer;
 }
@@ -241,13 +313,21 @@ li:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   gap: 5%;
 
-  margin: 20px;
+  margin: 0 20px;
+}
 
-  text-align: justify;
+.service-description-1 h2 {
+  font-size: var(--xxl-font-size);
+  line-height: 2.5rem;
+}
+
+.service-description-1 button {
+  justify-self: end;
+  margin-top: auto;
 }
 
 .service-description-2 {
@@ -255,21 +335,24 @@ li:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: end;
+  justify-content: start;
   gap: 5%;
 
-  margin: 20px;
+  margin: 0 20px;
+}
 
-  text-align: justify;
+.service-description-2 h2 {
+  font-size: var(--xxl-font-size);
+  line-height: 2.5rem;
 }
 
 #servizi {
-  margin-bottom: 10%;
+  margin-bottom: 50px;
 }
 
 .description-button-container {
   align-items: end;
+  margin-top: auto;
 }
 
 .services button {
@@ -280,7 +363,7 @@ li:hover {
 .cards-section {
   height: 100%;
 
-  margin-top: 300px;
+  margin-top: 200px;
 }
 .cards-description {
   display: flex;
@@ -288,13 +371,18 @@ li:hover {
   align-items: center;
   justify-content: center;
 
-  margin: 100px 20px;
+  margin: 100px 0 20px 0;
 
   text-align: center;
 }
 
+.cards-description h2 {
+  font-size: var(--xxl-font-size);
+  line-height: 2.5rem;
+}
+
 .cards {
-  height: 700px;
+  height: 100%;
 
   color: var(--background-color-white);
   font-size: var(--xl-font-size);
@@ -306,16 +394,30 @@ li:hover {
   grid-column: span 2;
 
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: end;
+  align-items: end;
 
   filter: brightness(70%);
 
   cursor: pointer;
 }
 
+.cards span {
+  padding: 1rem;
+}
+
+.card {
+  min-height: 350px;
+}
+.card-span-2 {
+  min-height: 350px;
+}
+.card-span-3 {
+  min-height: 350px;
+}
+
 .card:hover {
-  filter: brightness(100%);
+  filter: brightness(90%);
 }
 
 .card:hover {
@@ -328,8 +430,8 @@ li:hover {
   grid-column: span 4;
 
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: end;
+  align-items: end;
 
   filter: brightness(70%);
 
@@ -337,27 +439,27 @@ li:hover {
 }
 
 .card-span-2:hover {
-  filter: brightness(100%);
+  filter: brightness(90%);
 }
 
 .card-span-3 {
   grid-column: span 6;
 
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: end;
+  align-items: end;
 
-  filter: brightness(70%);
+  filter: brightness(50%);
 
   cursor: pointer;
 }
 
 .card-span-3:hover {
-  filter: brightness(100%);
+  filter: brightness(80%);
 }
 
 #card-1 {
-  background-image: url(./assets/card-1.jpg);
+  background-image: url(./assets/yoga-di-gruppo.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -373,7 +475,7 @@ li:hover {
   background-size: cover;
 }
 #card-4 {
-  background-image: url(./assets/card-4.jpg);
+  background-image: url(./assets/yoga-sonno.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -389,61 +491,14 @@ li:hover {
   background-size: cover;
 }
 #card-7 {
-  background-image: url(./assets/card-7.jpg);
+  background-image: url(./assets/home-yoga.jpg);
   background-position: center;
   background-size: cover;
-}
-/* Review section */
-.review-box {
-  height: 100svh;
-
-  background-color: var(--background-color-light);
-}
-
-.review-content {
-  grid-column: 2/12;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  margin-top: 150px;
-}
-
-.reviews {
-  grid-column: 2/12;
-
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-
-  margin: 100px;
-}
-
-.single-review {
-  width: 300px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.review-placeholder {
-  height: 50px;
-  width: 50px;
-
-  background-color: var(--background-color-placeholder);
-
-  border-radius: 50%;
 }
 
 /* Newsletter section */
 .newsletter-box {
-  height: 100svh;
+  height: 800px;
 
   display: flex;
   flex-direction: column;
@@ -465,7 +520,18 @@ li:hover {
   text-align: center;
 }
 
+.newsletter-description h2 {
+  font-size: var(--xxl-font-size);
+  line-height: 2.5rem;
+}
+
+.newsletter-form {
+  width: 800px;
+}
+
 form {
+  width: 100%;
+
   grid-column: 4/10;
 
   display: flex;
@@ -476,7 +542,7 @@ form {
 
 .input-field {
   height: 50px;
-  width: 250px;
+  width: 600px;
 
   margin: 10px;
   padding: 10px;
@@ -492,35 +558,40 @@ form {
   color: rgb(165, 165, 165);
 }
 
-.checkbox {
-  width: 300px;
+.input-box-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  font-size: var(--s-font-size);
+  position: relative;
+}
 
-  padding: 10px;
-
-  text-align: center;
+.input-box {
+  position: absolute;
+  right: 10px;
 }
 
 .submit {
   height: 50px;
-  width: 250px;
-
-  font-size: var(--s-font-size);
-  color: var(--text-color-white);
   background-color: var(--background-color-dark);
+  color: var(--text-color-white);
 
   border: 1px solid #2f2f2f;
+  cursor: pointer;
+
+  padding: 10px 30px;
 
   cursor: pointer;
 }
 
 /* Footer section */
 .footer {
-  height: 400px;
+  height: 100%;
 
   color: var(--text-color-white);
   background-color: var(--background-color-dark);
+
+  padding: 1rem 0;
 }
 
 .brand-data {
@@ -585,7 +656,6 @@ form {
 
 /* Cookie banner*/
 .cookie-banner {
-  height: 250px;
   width: 500px;
 
   position: fixed;
@@ -599,7 +669,7 @@ form {
   align-items: center;
   gap: 10px;
 
-  padding: 20px;
+  padding: 2rem;
   margin: 20px;
 
   background-color: var(--background-color-white);
@@ -613,7 +683,16 @@ form {
   width: 150px;
 }
 
+.cookie-banner p {
+  font-size: var(--s-font-size);
+  line-height: 1rem;
+}
+
 @media (max-width: 768px) {
+  p {
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
   /* Nav menu*/
   nav {
     height: 50px;
@@ -636,7 +715,7 @@ form {
     top: 50px;
     right: -100%;
 
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-white);
     color: var(--text-color-dark);
   }
 
@@ -678,15 +757,16 @@ form {
   }
 
   /* Hero section*/
+
   .hero-content {
     grid-column: span 12;
 
     margin-top: 50px;
+    justify-content: start;
   }
 
   .img-hero {
     grid-column: span 12;
-    max-width: 100%;
   }
 
   /* Brand description section */
@@ -694,6 +774,76 @@ form {
     grid-column: 2/12;
   }
 
+  .description-section {
+    min-height: 100%;
+    margin-bottom: 100px;
+  }
+
+  /* Cards section*/
+  .cards-section {
+    margin-top: 200px;
+  }
+
+  .cards-description {
+    margin: 100px 20px 50px 20px;
+  }
+
+  .card,
+  .card-span-2,
+  .card-span-3 {
+    grid-column: span 12;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+  .input-box-email {
+    min-width: 100%;
+    margin-top: 50px;
+  }
+  .newsletter-description {
+    grid-column: 4/10;
+  }
+  .input-field {
+    min-width: 300px;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  /* Thanks page*/
+  .thanks-content h1 {
+    font-size: var(--xl-font-size);
+  }
+
+  /* Cookie section*/
+  .cookie-banner {
+    height: 50% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+  footer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .stats-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+/* Desktop: 4 per riga */
+@media (min-width: 1024px) {
+  .stats-card {
+    flex: 1 1 calc(25% - 1rem);
+  }
+}
+
+@media (max-width: 1024px) {
   /* Services section */
 
   .img-service-1,
@@ -710,42 +860,11 @@ form {
   .service-description-1,
   .service-description-2 {
     grid-column: span 12;
-    align-items: center;
+    align-items: start;
+    margin: 50px 0;
   }
 
-  /* Cards section*/
-  .cards-section {
-    margin-top: 200px;
-  }
-
-  .card,
-  .card-span-2,
-  .card-span-3 {
-    grid-column: span 12;
-  }
-
-  .newsletter-description {
-    grid-column: 4/10;
-  }
-
-  /* Reviews section*/
-  .review-box {
-    height: auto;
-  }
-  .reviews {
-    flex-direction: column;
-  }
-
-  /* Thanks page*/
-  .thanks-content h1 {
-    font-size: var(--xl-font-size);
-  }
-
-  /* Cookie section*/
-  .cookie-banner {
-    height: 50% !important;
-    width: 100% !important;
-
-    margin: 0 !important;
+  .service-description-2 button {
+    margin-bottom: 50px;
   }
 }
