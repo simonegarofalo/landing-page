@@ -397,7 +397,7 @@ li:hover {
   justify-content: end;
   align-items: end;
 
-  filter: brightness(70%);
+  filter: brightness(50%);
 
   cursor: pointer;
 }
@@ -433,7 +433,7 @@ li:hover {
   justify-content: end;
   align-items: end;
 
-  filter: brightness(70%);
+  filter: brightness(50%);
 
   cursor: pointer;
 }
@@ -459,34 +459,34 @@ li:hover {
 }
 
 #card-1 {
-  background-image: url(./assets/yoga-di-gruppo.jpg);
+  background-image: url(./assets/gruppo-yoga.jpg);
   background-position: center;
   background-size: cover;
 }
 
 #card-2 {
-  background-image: url(./assets/card-2.jpg);
+  background-image: url(./assets/yoga-avanzato.jpg);
   background-position: center;
   background-size: cover;
 }
 #card-3 {
-  background-image: url(./assets/card-3.jpg);
+  background-image: url(./assets/meditazione.jpg);
   background-position: center;
   background-size: cover;
 }
 #card-4 {
-  background-image: url(./assets/yoga-sonno.jpg);
+  background-image: url(./assets/yoga-per-sonno.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
 }
 #card-5 {
-  background-image: url(./assets/card-5.jpg);
+  background-image: url(./assets/pregnant-yoga.jpg);
   background-position: center;
   background-size: cover;
 }
 #card-6 {
-  background-image: url(./assets/card-6.jpg);
+  background-image: url(./assets/open-space-yoga.jpg);
   background-position: center;
   background-size: cover;
 }
