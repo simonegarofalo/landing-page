@@ -584,6 +584,8 @@ form {
   padding: 10px 30px;
 
   cursor: pointer;
+
+  border-radius: 0%;
 }
 
 /* Footer section */
