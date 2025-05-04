@@ -564,6 +564,8 @@ form {
   align-items: center;
 
   position: relative;
+
+  border-radius: 0%;
 }
 
 .input-box {
@@ -800,6 +802,7 @@ form {
   .input-box-email {
     min-width: 100%;
     margin-top: 50px;
+    border-radius: 0%;
   }
   .newsletter-description {
     grid-column: 4/10;
